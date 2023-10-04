@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap");
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap");
+/* header ------------------------------------------- */
+.active::after,
+.nav-bar li a:hover::after {
+  content: "";
+  width: 70%;
+  height: 4px;
+  position: absolute;
+  background-color: rgb(36, 186, 181);
+  bottom: -3px;
+  left: 5px;
+  border-radius: 45%;
+}
+
+/*  
+.main .social-img:hover {
+  cursor: pointer;
+}
+.main .v-img {
+  padding-top: 25px;
+}
+.main1 .app {
+  margin-top: 73px;
+}
+footer .p-text {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #9a9292;
+}
+#nav_btn,
+.nav_btn {
+  display: none;
+} */
+/* responsive------------------------------------------ 1024px----------------------------------- */
+/* @media screen and (max-width: 1024px) {
+  .features {
+    padding: 50px 0px 0px 0px;
+  }
+  .features-counter {
+    width: 100%;
+    padding: 0 80px;
+  }
+  .features-counter .fc1 img {
+    width: 100%;
+  }
+  .features-counter .fc1 button {
+    padding: 0px;
+    font-size: 11px;
+    font-weight: 400px;
+  }
+  .features-allpro .pro1 img {
+    height: 34vh;
+  }
+  .features-products h2 {
+    font-size: 38px;
+  }
+  .parint-banner .banner-box {
+    min-width: 415px;
+  }
+  .banner-box h2 {
+    font-size: 27px;
+  }
+  .banner-box1 h2 {
+    font-size: 22px;
+  }
+  .main .social-img {
+    width: 49%;
+  }
+  .main1 .app {
+    margin-top: 52px;
+  }
+  .main .main1 {
+    width: 25%;
+  }
+} */
+/* responsive------------------------------------------ 768px------ */
+/* header {
+  padding: 0 80px 0 80px;
+} */
+ @media screen and (max-width: 768px) {
+  .navbar ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 13;
+    flex-direction: column;
+    background: rgb(166, 174, 209);
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    padding: 26px;
+    transition: left 0.5s ease-in-out;
+  }
+  #nav_btn:checked + ul {
+    left: 0%;
+  }
+  #nav_btn {
+    display: none;
+  }
+  .nav_btn {
+    display: inline-block;
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    z-index: 11;
+    cursor: pointer;
+    font-size: 27px;
+  }
+  .nav_btn.close {
+    z-index: 14;
+    position: absolute;
+    color: aliceblue;
+  }
+  .navbar ul li {
+    margin-top: 50px;
+    font-size: large;
+    font-weight: 800;
+  }
+  .navbar ul {
+    width: 100%;
+  }
+  .navbar ul li a {
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar ul li a.active::after,
+  .navbar ul li a:hover::after {
+    content: "";
+    width: 5%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 330px;
+  }
+
+  .hero {
+    height: 79vh;
+  }
+  .hero-text {
+    width: 80%;
+    height: 75vh;
+    padding: 0px 0px 0px 20px;
+  }
+  .ht h2 {
+    font-size: 35px;
+  }
+  .ht button {
+    width: 30%;
+    height: 7vh;
+    font-size: 13px;
+  }
+  .features-counter {
+    width: 100%;
+    height: 25vh;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+    height: 90vh;
+  }
+  .features-counter .fc1 {
+    height: 40vh;
+    width: 30%;
+  }
+  .features-counter .fc1 button {
+    padding: 0px;
+    margin: 15px 0px 0px 44px;
+    font-size: 10px;
+  }
+  .features-products h2 {
+    font-size: 30px;
+  }
+  .features-products p {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  .features-products {
+    padding: 40px 50px;
+  }
+  .features-allpro .pro1 {
+    height: 61vh;
+    padding-top: 6px;
+    width: 50%;
+  }
+  .banner h2 {
+    font-size: 25px;
+  }
+  .banner button {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 21px;
+  }
+  .parint-banner {
+    padding: 50px 20px 0px 20px;
+  }
+  .parint-banner .banner-box {
+    min-width: 340px;
+    height: 40vh;
+  }
+  .banner-box button {
+    padding: 7px 14px;
+  }
+  .banner-3box {
+    padding: 50px 20px 0px 20px;
+  }
+  .banner-box1 h2 {
+    font-size: 18px;
+  }
+  .banner-box1 {
+    height: 22vh;
+  }
+  .banner-latter {
+    padding: 50px 20px 50px 20px;
+  }
+  .banner-latter .text h4 {
+    font-size: 19px;
+  }
+  .banner-latter .text p {
+    font-size: 14px;
+  }
+  .banner-latter .form input {
+    height: 35px;
+  }
+  .banner-latter .form button {
+    font-size: 14px;
+  }
+  footer .main {
+    padding: 50px 20px 50px 50px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .main .main1 {
+    width: 50%;
+  }
+  .main .social-img {
+    width: 40%;
+  }
+  .main1 .app {
+    margin-top: 77px;
+  }
+  .main .v-img {
+    width: 80%;
+  }
+} 
+/* responsive------------------------------------------ 425px------ */
+/* @media screen and (max-width: 425px) {
+  header {
+    padding: 0 0px 0 10px;
+  }
+  .navbar ul li a.active::after,
+  .navbar ul li a:hover::after {
+    content: "";
+    width: 10%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 130px;
+  }
+  .hero {
+    height: 39vh;
+  }
+  .hero-text {
+    width: 80%;
+    height: 48vh;
+    padding: 0px 0px 0px 10px;
+  }
+  .ht h2 {
+    font-size: 18px;
+  }
+  .ht h5 {
+    font-size: 14px;
+  }
+  .ht p {
+    font-size: 12px;
+  }
+  .ht button {
+    width: 38%;
+    height: 4vh;
+    font-size: 10px;
+  }
+  .features {
+    padding: 15px 0px 0px 0px;
+    width: 100%;
+    height: 100vh;
+  }
+  .features-counter .fc1 {
+    height: 30vh;
+    width: 47%;
+  }
+  .features-counter .fc1 button {
+    margin: 0px 2px 7px 35px;
+  }
+  .features-counter {
+    width: 100%;
+    height: 100vh;
+  }
+  .features-products h2 {
+    font-size: 22px;
+  }
+  .features-products p {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .features-allpro .pro1 {
+    width: 100%;
+  }
+  .banner h2 {
+    font-size: 16px;
+  }
+  .banner h4 {
+    font-size: 14px;
+  }
+  .banner button {
+    font-size: 11px;
+    font-weight: 300;
+    padding: 7px 13px;
+  }
+  .parint-banner {
+    grid-gap: 20px;
+  }
+  .parint-banner .banner-box {
+    min-width: 383px;
+    height: 40vh;
+  }
+  .banner-box h2 {
+    font-size: 23px;
+  }
+  .banner-box span {
+    font-size: 12px;
+  }
+  .banner-box button {
+    padding: 5px 5px;
+    font-size: 12px;
+  }
+  .banner-box1 {
+    height: 30vh;
+    min-width: 100%;
+  }
+  .banner-box1 h3 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .banner-latter {
+    height: 24vh;
+  }
+  .banner-latter .text p {
+    font-size: 9px;
+  }
+  .banner-latter .form input {
+    height: 30px;
+    padding: 0;
+    font-size: 11px;
+  }
+  .banner-latter .form button {
+    font-size: 11px;
+    width: 70px;
+  }
+  .main .main1 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .main1 .app {
+    margin-top: 0px;
+  }
+} */
+/* responsive------------------------------------------ 375px------ */
+/* @media screen and (max-width: 375px) {
+  header {
+    padding: 0 0px 0 10px;
+  }
+  .navbar ul li a.active::after,
+  .navbar ul li a:hover::after {
+    content: "";
+    width: 10%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 130px;
+  }
+  .hero {
+    height: 39vh;
+  }
+  .hero-text {
+    width: 80%;
+    height: 48vh;
+    padding: 0px 0px 0px 10px;
+  }
+  .ht h2 {
+    font-size: 18px;
+  }
+  .ht h5 {
+    font-size: 14px;
+  }
+  .ht p {
+    font-size: 12px;
+  }
+  .ht button {
+    width: 38%;
+    height: 4vh;
+    font-size: 10px;
+  }
+  .features {
+    padding: 15px 0px 0px 0px;
+    width: 100%;
+    height: 100vh;
+  }
+  .features-counter .fc1 {
+    height: 30vh;
+    width: 47%;
+  }
+  .features-counter .fc1 button {
+    margin: 20px 20px 20px 34px;
+  }
+  .features-counter {
+    width: 100%;
+    height: 100vh;
+  }
+  .features-products h2 {
+    font-size: 22px;
+  }
+  .features-products p {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .features-allpro .pro1 {
+    width: 100%;
+  }
+  .banner h2 {
+    font-size: 16px;
+  }
+  .banner h4 {
+    font-size: 14px;
+  }
+  .banner button {
+    font-size: 11px;
+    font-weight: 300;
+    padding: 7px 13px;
+  }
+  .parint-banner {
+    grid-gap: 20px;
+  }
+  .parint-banner .banner-box {
+    min-width: 332px;
+    height: 31vh;
+  }
+  .banner-box h2 {
+    font-size: 23px;
+  }
+  .banner-box span {
+    font-size: 12px;
+  }
+  .banner-box button {
+    padding: 5px 5px;
+    font-size: 12px;
+  }
+  .banner-box1 {
+    height: 30vh;
+    min-width: 100%;
+  }
+  .banner-box1 h3 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .banner-latter {
+    height: 24vh;
+  }
+  .banner-latter .text p {
+    font-size: 9px;
+  }
+  .banner-latter .form input {
+    height: 30px;
+    padding: 0;
+    font-size: 11px;
+  }
+  .banner-latter .form button {
+    font-size: 11px;
+    width: 70px;
+  }
+  .main .main1 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .main1 .app {
+    margin-top: 0px;
+  }
+} */
+/* responsive------------------------------------------ 360px------ */
+/* @media screen and (max-width: 360px) {
+  header {
+    height: 6vh;
+  }
+  .hero {
+    height: 30vh;
+}
+.hero-text {
+  width: 97%;
+  height: 38vh;
+}
+.hero {
+  margin-top: 40px;
+  margin-bottom: 28px;
+}
+
+
+
+} */
+/* responsive------------------------------------------ 320px---------------------------- */
+/* @media screen and (max-width: 320px) {
+  .parint-banner .banner-box {
+    min-width: 279px;
+    height: 30vh;
+  }
+  .banner button {
+    font-size: 9px;
+  }
+  .banner-latter .form {
+    width: 69%;
+    margin-left: 22px;
+  }
+  .banner-latter .form input {
+    height: 20px;
+  }
+} */
+/* Small screens, such as mobile devices */
+@media only screen and (max-width: 767px) {
+  /* CSS styles for small screens */
+}
+/* Medium screens, such as tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* CSS styles for medium screens */
+}
+/* Large screens, such as laptops */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* CSS styles for large screens */
+}
+/* Extra large screens, such as desktops */
+@media only screen and (min-width: 1200px) {
+  /* CSS styles for extra large screens */
+}
